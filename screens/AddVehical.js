@@ -4,12 +4,12 @@ import React from 'react'
 export default function AddVehical() {
     return (
         <View style={styles.container}>
-            <Text style={{color:'white' , fontSize:34 , fontWeight:'bold'}}>Add Vehical</Text>
+            <Text style={{ color: 'white', fontSize: 34, fontWeight: 'bold' }}>Add Vehical</Text>
 
             <TouchableOpacity>
                 <View style={styles.buttonCam}>
                     <Text style={styles.buttonText}>
-                       Upload Image
+                        Upload Image
                     </Text>
                 </View>
             </TouchableOpacity>
@@ -17,10 +17,14 @@ export default function AddVehical() {
             <TouchableOpacity>
                 <View style={styles.buttonCapture}>
                     <Text style={styles.buttonText}>
-                       Capture
+                        Capture
                     </Text>
                 </View>
             </TouchableOpacity>
+
+            <Image
+                source={{ uri: 'https://i.imgflip.com/6e6bpc.gif' }} resizeMode="cover" style={styles.image}></Image>
+
 
             <TextInput
                 placeholderTextColor="black"
@@ -116,43 +120,51 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        borderRadius:8,
+        borderRadius: 8,
         paddingVertical: 14,
-        paddingHorizontal:1,
+        paddingHorizontal: 1,
         backgroundColor: '#F24C4C',
-        position:'relative',
-        top:40,
-        width:151
+        position: 'relative',
+        top: 26,
+        width: 151
     },
 
-    buttonText:{
-        color:'white',
-        fontWeight:'bold',
-        textTransform:'uppercase',
+    buttonText: {
+        color: 'white',
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
         fontSize: 16,
         textAlign: 'center'
     },
     buttonCam: {
-        position:'relative',
-        right:'26%',
-        borderRadius:12,
+        position: 'relative',
+        right: '26%',
+        borderRadius: 12,
         paddingVertical: 19,
-        paddingHorizontal:1,
+        paddingHorizontal: 1,
         backgroundColor: '#293462',
-        position:'relative',
-        top:40,
-        width:120
+        position: 'relative',
+        top: 40,
+        width: 120
     },
     buttonCapture: {
-        position:'relative',
-        right:'26%',
-        borderRadius:12,
+        position: 'relative',
+        right: '26%',
+        borderRadius: 12,
         paddingVertical: 19,
-        paddingHorizontal:1,
+        paddingHorizontal: 1,
         backgroundColor: '#FFA500',
-        position:'relative',
-        top:45,
-        width:120
+        position: 'relative',
+        top: 45,
+        width: 120
+    },
+    image:{
+        width: 180, 
+        height: 100,
+        position:'absolute',
+       right:'5%',
+      top:'14%'
+        
     }
 
 });
