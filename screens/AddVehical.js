@@ -4,7 +4,7 @@ import React from 'react'
 export default function AddVehical() {
     return (
         <View style={styles.container}>
-            <Text style={{ color: 'white', fontSize: 34, fontWeight: 'bold' }}>Add Vehical</Text>
+            <Text style={{ color: 'white', fontSize: 34, fontWeight: 'bold' , position:'relative', top:'2%', fontStyle:'normal' }}>Add Vehical</Text>
 
             <TouchableOpacity>
                 <View style={styles.buttonCam}>
