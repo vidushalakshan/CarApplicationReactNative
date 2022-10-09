@@ -6,6 +6,14 @@ export default function AddVehical() {
         <View style={styles.container}>
             <Text style={{color:'#9A0680' , fontSize:30 , fontWeight:'bold'}}>Add Vehical</Text>
 
+            <TouchableOpacity>
+                <View style={styles.buttonCam}>
+                    <Text style={styles.buttonText}>
+                       Upload Image
+                    </Text>
+                </View>
+            </TouchableOpacity>
+
             <TextInput
                 placeholderTextColor="black"
                 style={styles.input1}
@@ -63,7 +71,7 @@ const styles = StyleSheet.create({
     },
 
     input1: {
-        marginTop: '10%',
+        marginTop: '25%',
         borderWidth: 1,
         padding: 10,
         width: '80%',
@@ -73,7 +81,7 @@ const styles = StyleSheet.create({
     },
 
     input2: {
-        marginTop: '10%',
+        marginTop: '3%',
         borderWidth: 1,
         padding: 10,
         width: '80%',
@@ -82,7 +90,7 @@ const styles = StyleSheet.create({
     },
 
     input3: {
-        marginTop: '10%',
+        marginTop: '3%',
         borderWidth: 1,
         padding: 10,
         width: '80%',
@@ -91,7 +99,7 @@ const styles = StyleSheet.create({
     },
 
     input4: {
-        marginTop: '10%',
+        marginTop: '3%',
         borderWidth: 1,
         padding: 10,
         width: '80%',
@@ -115,6 +123,17 @@ const styles = StyleSheet.create({
         textTransform:'uppercase',
         fontSize: 16,
         textAlign: 'center'
-    }
+    },
+    buttonCam: {
+        position:'relative',
+        right:'26%',
+        borderRadius:12,
+        paddingVertical: 19,
+        paddingHorizontal:1,
+        backgroundColor: '#293462',
+        position:'relative',
+        top:40,
+        width:120
+    },
 
 });
