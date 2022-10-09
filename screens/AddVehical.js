@@ -4,12 +4,20 @@ import React from 'react'
 export default function AddVehical() {
     return (
         <View style={styles.container}>
-            <Text style={{color:'#9A0680' , fontSize:30 , fontWeight:'bold'}}>Add Vehical</Text>
+            <Text style={{color:'white' , fontSize:34 , fontWeight:'bold'}}>Add Vehical</Text>
 
             <TouchableOpacity>
                 <View style={styles.buttonCam}>
                     <Text style={styles.buttonText}>
                        Upload Image
+                    </Text>
+                </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+                <View style={styles.buttonCapture}>
+                    <Text style={styles.buttonText}>
+                       Capture
                     </Text>
                 </View>
             </TouchableOpacity>
@@ -71,7 +79,7 @@ const styles = StyleSheet.create({
     },
 
     input1: {
-        marginTop: '25%',
+        marginTop: '15%',
         borderWidth: 1,
         padding: 10,
         width: '80%',
@@ -135,5 +143,16 @@ const styles = StyleSheet.create({
         top:40,
         width:120
     },
+    buttonCapture: {
+        position:'relative',
+        right:'26%',
+        borderRadius:12,
+        paddingVertical: 19,
+        paddingHorizontal:1,
+        backgroundColor: '#FFA500',
+        position:'relative',
+        top:45,
+        width:120
+    }
 
 });
