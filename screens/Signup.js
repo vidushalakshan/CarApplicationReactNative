@@ -6,7 +6,7 @@ export default function Signup() {
     return (
         <View style={styles.container}>
 
-            <Text style={{ color: '#f6c708', fontSize: 50, position: 'absolute' }}>Sign up</Text>
+            <Text style={{ color: '#f6c708', fontSize: 50, position: 'absolute', fontWeight:'bold', top:15 }}>Sign up</Text>
 
             <TextInput
                 placeholderTextColor="black"
@@ -35,14 +35,7 @@ export default function Signup() {
             <TouchableOpacity>
                 <View style={styles.button}>
                 <Text style={styles.buttonText}>
-                    Login
-                </Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <View style={styles.buttonSign}>
-                <Text style={styles.buttonText}>
-                   Signup
+                    Register
                 </Text>
                 </View>
             </TouchableOpacity>
@@ -58,7 +51,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#181718',
     },
     input1: {
-        marginTop: '22%',
+        marginTop: '35%',
         borderWidth: 1,
         padding: 10,
         width: '80%',
@@ -67,7 +60,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     input2: {
-        marginTop: '8%',
+        marginTop: '15%',
         borderWidth: 1,
         padding: 10,
         width: '80%',
@@ -75,7 +68,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
     },
     input3: {
-        marginTop: '8%',
+        marginTop: '15%',
         borderWidth: 1,
         padding: 10,
         width: '80%',
@@ -83,7 +76,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
     },
     input4: {
-        marginTop: '8%',
+        marginTop: '15%',
         borderWidth: 1,
         padding: 10,
         width: '80%',
@@ -97,7 +90,7 @@ const styles = StyleSheet.create({
         paddingHorizontal:50,
         backgroundColor: '#1746A2',
         position:'relative',
-        top:20
+        top:40
     },
 
     buttonText:{
@@ -106,14 +99,6 @@ const styles = StyleSheet.create({
         textTransform:'uppercase',
         fontSize: 16,
         textAlign: 'center'
-    },
-    buttonSign: {
-        borderRadius:8,
-        paddingVertical: 14,
-        paddingHorizontal:44,
-        backgroundColor: '#6F38C5',
-        position:'relative',
-        top:40
     }
 });
 
