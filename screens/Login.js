@@ -2,7 +2,7 @@ import { View, Text, ImageBackground, Dimensions, ScrollView, Image, StyleSheet 
 import React from 'react'
 import { NativeBaseProvider, Box, VStack, Input, Button } from 'native-base'
 
-export default function Login() {
+export default function Login({navigation}) {
     return (
         <NativeBaseProvider style={styles.context}>
 
@@ -31,8 +31,7 @@ export default function Login() {
                             md: 0
                         }} size='md' borderRadius={100}>
                             <Button colorScheme={"blue"} width={'32'}>Login</Button>
-                            <Button width={'32'}>  Register</Button>
-
+                            <Button width={'32'} onPress={()=>{navigation.navigate("Signup")}}>  Register</Button>
                         </Button.Group>
                     </VStack>
                 </ScrollView>
