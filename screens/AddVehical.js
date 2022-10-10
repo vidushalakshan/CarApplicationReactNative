@@ -23,7 +23,7 @@ export default function AddVehical() {
             </TouchableOpacity>
 
             <Image
-                source={{ uri: 'https://i.imgflip.com/6e6bpc.gif' }} resizeMode="cover" style={styles.image}></Image>
+                source={{ uri: 'https://c4.wallpaperflare.com/wallpaper/66/220/943/bmw-cars-car-sport-car-wallpaper-preview.jpg' }} resizeMode="cover" style={styles.image}></Image>
 
 
             <TextInput

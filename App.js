@@ -10,7 +10,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 export default function App() {
   return (
-    <Login/>
+    <View>
+      <VehicalFlatList/>
+    </View>
   )
 }
 
