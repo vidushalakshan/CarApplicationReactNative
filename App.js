@@ -3,7 +3,7 @@ import React from 'react'
 import Login from './screens/Login'
 import Signup from './screens/Signup'
 import AddVehical from './screens/AddVehical'
-import VehicalFlatList from './screens/VehicalFlatList'
+import VehicalFlatList from './screens/VehicalList'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 

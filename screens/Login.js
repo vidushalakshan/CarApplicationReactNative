@@ -1,8 +1,28 @@
-import { View, Text, ImageBackground, Dimensions, ScrollView, Image, StyleSheet } from 'react-native'
-import React from 'react'
+import { View, Text, ImageBackground, Dimensions, ScrollView, Image, StyleSheet, Alert } from 'react-native'
+import React, { useState } from 'react'
 import { NativeBaseProvider, Box, VStack, Input, Button } from 'native-base'
+import { err } from 'react-native-svg/lib/typescript/xml';
 
-export default function Login({navigation}) {
+export default function Login({ navigation }) {
+    const [title,setTitle]=useState('');
+    const [body,setBody]=useState('');
+    const[id,setId]=useState('');
+    
+const saveData = ()=>{
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+            title: 'title',
+            body: 'body',
+            userId: 1,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => {Alert.alert("Loging Successfully..")})
+        .catch((err)=>{Alert.alert("Error occured !")});
+}
     return (
         <NativeBaseProvider style={styles.context}>
 
@@ -23,15 +43,15 @@ export default function Login({navigation}) {
                         </Box>
 
                         <Box mt={"5"}>
-                            <Input mt={"1"} variant="rounded" placeholder="Username" width={'80%'} color={"#ffffff"} />
-                            <Input mt={"1"} variant="rounded" placeholder="Password" width={'80%'} color={"#ffffff"} />
+                            <Input mt={"1"} variant="rounded" placeholder="Username" width={'80%'} color={"#ffffff"} onChangeText={(e) => {setTitle(e) }}/>
+                            <Input mt={"1"} variant="rounded" placeholder="Password" width={'80%'} color={"#ffffff"} onChangeText={(e) => {setBody(e) }}/>
                         </Box>
                         <Button.Group isAttached mx={{
                             base: "auto",
                             md: 0
                         }} size='md' borderRadius={100}>
-                            <Button colorScheme={"blue"} width={'32'}>Login</Button>
-                            <Button width={'32'} onPress={()=>{navigation.navigate("Signup")}}>  Register</Button>
+                            <Button colorScheme={"blue"} width={'32'} onPress={() => {{saveData} navigation.navigate("VehicalDetails") }}>Login</Button>
+                            <Button width={'32'} onPress={() => { navigation.navigate("Signup") }}>  Register</Button>
                         </Button.Group>
                     </VStack>
                 </ScrollView>
