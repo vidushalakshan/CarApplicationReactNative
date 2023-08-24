@@ -1,5 +1,5 @@
 # *About* ❓
-**This Car Sells System Mobile Application..**.
+**This is Car Sells System Mobile Application..**.
 
 # *Loging*
 ![park](./image/Readme/loging.png)
